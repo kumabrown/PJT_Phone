@@ -1,2 +1,3 @@
 ﻿  main.c
-  PJT_Phone.vcxproj -> C:\Users\zxcqw\Source\Repos\PJT_Phone\PJT_Phone\x64\Debug\PJT_Phone.exe
+C:\Users\hdpark\Source\Repos\PJT_Phone\PJT_Phone\main.c(22,6): warning C4047: 'initializing': 'DB *' differs in levels of indirection from 'DB (*)[50]'
+  PJT_Phone.vcxproj -> C:\Users\hdpark\Source\Repos\PJT_Phone\PJT_Phone\x64\Debug\PJT_Phone.exe
