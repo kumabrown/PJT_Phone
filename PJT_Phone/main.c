@@ -1,44 +1,48 @@
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
-
-#define N 20
-#define COUNT 50
-
-typedef struct {
-	char name[N];
-	char number[N];
-} DB;
+#include "main.h"
 
 int main(void) {
-	
-	int i;
-	char temp_name[N];
-	char temp_number[N];
-	
 	DB Main_DB[COUNT];
 	memset(Main_DB, 0, sizeof(Main_DB));
 
 	DB *Ptr_Main_DB = &Main_DB;
-
-	for (i = 0; i < 2; i++) {
-		printf("Name: ");
-		gets_s(temp_name, N);
-		
-		printf("Phone Number: ");
-		gets_s(temp_number, N);
-
-		strcpy_s((Ptr_Main_DB + i)->name, N, temp_name);
-		strcpy_s((Ptr_Main_DB + i)->number, N, temp_number);
-
-		printf("\n");
-	}
-	system("cls");
-	for (i = 0; i < 2; i++) {
-		printf("Name: %s\n", Main_DB[i].name);
-		printf("H.P.: %s\n", Main_DB[i].number);
-	}
 	
+	for (;;) {
+		printf("Information Program\n");
+		printf("\tn: Add Contact Information\n");
+		printf("\td: Display Contact Information\n");
+		printf("\tq: Program exit\n");
+
+		char command;
+		printf("Enter command: ");
+		scanf_s("%c", &command, 1);
+
+		switch (command) {
+			case 'n': {
+					system("cls");
+					func_new(Ptr_Main_DB);
+					printf("\n");
+					break;
+				}
+			case 'd': {
+					system("cls");
+					func_dis(Ptr_Main_DB);
+					printf("\n");
+					break;
+				}
+			case 'q': {
+					printf("Program done...\n");
+					printf("Program exit...\n");
+					return 0;
+				}
+			default: {
+					printf("Warning: Invalid command\n\n");
+					break;
+				}
+		}
+		while (getchar() != '\n');
+	}
+
+	system("pause");
 
 	return 0;
 }

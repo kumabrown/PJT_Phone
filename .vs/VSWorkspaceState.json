@@ -1,7 +1,8 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\PJT_Phone"
   ],
-  "SelectedNode": "\\PJT_Phone.sln",
+  "SelectedNode": "\\PJT_Phone\\main.c",
   "PreviewInSolutionExplorer": false
 }
