@@ -1,6 +1,8 @@
 #include "main.h"
 
 int main(void) {
+	int iteration = 0;
+	
 	DB Main_DB[COUNT];
 	memset(Main_DB, 0, sizeof(Main_DB));
 
@@ -10,6 +12,7 @@ int main(void) {
 		printf("Information Program\n");
 		printf("\tn: Add Contact Information\n");
 		printf("\td: Display Contact Information\n");
+		printf("\tm: Modify Contact Information\n");
 		printf("\tq: Program exit\n");
 
 		char command;
@@ -19,13 +22,13 @@ int main(void) {
 		switch (command) {
 			case 'n': {
 					system("cls");
-					func_new(Ptr_Main_DB);
+					iteration = func_new(Ptr_Main_DB, iteration);
 					printf("\n");
 					break;
 				}
 			case 'd': {
 					system("cls");
-					func_dis(Ptr_Main_DB);
+					func_dis(Ptr_Main_DB, iteration);
 					printf("\n");
 					break;
 				}

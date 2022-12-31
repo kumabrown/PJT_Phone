@@ -1,8 +1,7 @@
 #include "main.h"
 
-void func_dis(DB *dis_DB) {
+void func_dis(DB *dis_DB, int n) {
 	int i = 0;
-	int n = sizeof(dis_DB);
 
 	for (; i < n; i++) {
 		printf("%d information\n", i + 1);

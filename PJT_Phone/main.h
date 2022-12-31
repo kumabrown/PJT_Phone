@@ -10,5 +10,5 @@ typedef struct {
 	char number[N];
 } DB;
 
-void func_new(DB *new_DB);
-void func_dis(DB *dis_DB);
+int func_new(DB *new_DB, int n);
+void func_dis(DB *dis_DB, int n);
