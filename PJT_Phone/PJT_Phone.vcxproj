@@ -128,6 +128,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="func_dis.c" />
+    <ClCompile Include="func_modi.c" />
     <ClCompile Include="func_new.c" />
     <ClCompile Include="main.c" />
   </ItemGroup>

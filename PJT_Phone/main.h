@@ -12,3 +12,4 @@ typedef struct {
 
 int func_new(DB *new_DB, int n);
 void func_dis(DB *dis_DB, int n);
+void func_modi(DB *modi_DB, int n);

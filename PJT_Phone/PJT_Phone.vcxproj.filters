@@ -24,6 +24,9 @@
     <ClCompile Include="func_dis.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="func_modi.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="main.h">

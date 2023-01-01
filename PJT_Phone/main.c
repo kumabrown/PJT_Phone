@@ -2,6 +2,7 @@
 
 int main(void) {
 	int iteration = 0;
+	char command;
 	
 	DB Main_DB[COUNT];
 	memset(Main_DB, 0, sizeof(Main_DB));
@@ -14,9 +15,8 @@ int main(void) {
 		printf("\td: Display Contact Information\n");
 		printf("\tm: Modify Contact Information\n");
 		printf("\tq: Program exit\n");
-
-		char command;
-		printf("Enter command: ");
+		
+		printf("\nEnter command: ");
 		scanf_s("%c", &command, 1);
 
 		switch (command) {
@@ -30,6 +30,11 @@ int main(void) {
 					system("cls");
 					func_dis(Ptr_Main_DB, iteration);
 					printf("\n");
+					break;
+				}
+			case 'm': {
+					system("cls");
+					func_modi(Ptr_Main_DB, iteration);
 					break;
 				}
 			case 'q': {
