@@ -5,6 +5,8 @@ int func_new(DB *new_DB, int n) {
 	char temp_number[N] = "PHONE NUMBER";
 	char command;
 
+	printf("========== The process of adding a new contact information ==========\n\n");
+
 	for (;;) {
 		while (getchar() != '\n');
 
@@ -17,7 +19,7 @@ int func_new(DB *new_DB, int n) {
 		strcpy_s((new_DB + n)->name, N, temp_name);
 		strcpy_s((new_DB + n)->number, N, temp_number);
 
-		printf("Continue?? ");
+		printf("\nContinue?? ");
 		scanf_s("%c", &command, 1);
 		printf("\n");
 

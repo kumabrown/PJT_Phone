@@ -19,27 +19,25 @@ int main(void) {
 		printf("\nEnter command: ");
 		scanf_s("%c", &command, 1);
 
+		system("cls");
+
 		switch (command) {
 			case 'n': {
-					system("cls");
 					iteration = func_new(Ptr_Main_DB, iteration);
 					printf("\n");
 					break;
 				}
 			case 'd': {
-					system("cls");
 					func_dis(Ptr_Main_DB, iteration);
 					printf("\n");
 					break;
 				}
 			case 'm': {
-					system("cls");
 					func_modi(Ptr_Main_DB, iteration);
 					break;
 				}
 			case 'q': {
-					printf("Program done...\n");
-					printf("Program exit...\n");
+					printf("Program exit\n");
 					return 0;
 				}
 			default: {
@@ -49,8 +47,6 @@ int main(void) {
 		}
 		while (getchar() != '\n');
 	}
-
-	system("pause");
 
 	return 0;
 }
